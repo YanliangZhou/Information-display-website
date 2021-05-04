@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if notfound %}
+        <h2>{{notfound}}</h2>
+    {% else %}
+<!--        <h2>{{username}}</h2>-->
+            <div class="card" style="width: 18rem;">
+                <img src="{{username.avatar_url}}" class="card-img-top" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{username.name}}</h5>
+                    <p class="card-text">location: {{username.location}}</p>
+                    <p class="card-text">created_at: {{username.created_at}}</p>
+                </div>
+            </div>
+    {% endif %}
+{% endblock %}
